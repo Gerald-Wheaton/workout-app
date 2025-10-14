@@ -29,7 +29,6 @@ export function ExerciseSheet({
         onPress={() => onOpenChange(true)}
         className="absolute bottom-32 right-6 h-14 w-14 rounded-full bg-black items-center justify-center shadow-lg z-50"
         activeOpacity={0.9}
-        // style={{ zIndex: 50 }}
       >
         <Edit size={24} color="#fff" />
       </TouchableOpacity>
@@ -60,7 +59,9 @@ export function ExerciseSheet({
                       onOpenChange(false)
                     }}
                     onDelete={() => onDeleteExercise(index)}
-                    onUpdate={(name, totalSets) => onUpdateExercise(index, name, totalSets)}
+                    onUpdate={(name, totalSets) =>
+                      onUpdateExercise(index, name, totalSets)
+                    }
                   />
                 ))}
               </View>
